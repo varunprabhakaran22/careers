@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Carrers</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -19,13 +20,18 @@
         </div>
 
         <div class="search-area">
-            <div class="search-skill"></div>
-            <div class="search-location"></div>
-            <div class="search-experience"></div>
+            <div>
+                <div class="search-skill"> <input  class="size" id="skills" type="text" placeholder="skills" value=""></div>
+                <div class="search-location"><input class="size" id="location" type="text" placeholder="Location" value=""></div>
+                <div class="search-experience"> <input  class="size" id="experience" type="text" placeholder="experience" value=""></div>
+            </div>
+            <div>
+                <div class="search-button"><input class="size" type="button" value="search"></div>
+            </div>
         </div>
 
-
-    </div>
+    </div>s
     
 </body>
+<script src="script.js"></script>
 </html>

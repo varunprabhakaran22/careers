@@ -3,10 +3,12 @@
     --secondary-color:#ffffff;
     --font-size:32px;
 }
+
 .container{
     width: 90%;
     margin: auto;
 }
+
 .heading{
     background-color:var(--secondary-color);
     display: flex;
@@ -34,3 +36,20 @@ a{
     text-decoration: none;
     color: #000000;
 }
+
+.search-area{
+    display: flex;
+    justify-content: space-between;
+    max-width: 1080px;
+    margin: auto;
+}
+
+.search-skill, .search-location, .search-experience, .search-button{
+    display: inline-block;    
+}
+
+.size {
+    padding: 12px 20px;
+    margin: 0;
+}
+
