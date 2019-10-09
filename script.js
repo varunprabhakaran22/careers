@@ -4,29 +4,50 @@ let locationn
 let experience
 let userSearch
 
+//main method which call other methods
+init()
 
-$(document).ready(function(){
-    $.ajax({
-        url:'http://localhost:8100/api',
-        type:'GET',
-        success: function (data) {
-            jsonData=data
-        }
+function init(){
+    $(document).ready(function(){
+        $.ajax({
+            url:'http://localhost:8100/api',
+            type:'GET',
+            success: function (data) {
+                jsonData=data
+                getUserInput()
+            }
+        });
     });
-});
+}
 
+function getUserInput(){
+    document.getElementsByClassName("search-button")[0].addEventListener("click", function() {
+        skill = $("#skills").val().toLowerCase();
+        console.log(skill)
+        if(skill ===""){
+            alert("Enter the valued input")
+        }
+        else{
+            userSearch=jsonData.data.filter( (value) => (value.skills.toLowerCase().includes(skill)) || 
+                                                        (value.location.toLowerCase().includes(skill)) ||
+                                                        (value.experience.toLowerCase().includes(skill)))
+                                                    
+            console.log(userSearch)
+        }
+        let n=userSearch.length
+        if(n === 0){
+            alert("Enter the valued input")
+        }
 
-document.getElementsByClassName("search-button")[0].addEventListener("click", function() {
-    skill = $("#skills").val();
-    locationn = $("#location").val();
-    experience = $("#experience").val();
-    userSearch=jsonData.data.filter( (value) =>  ( ( (skill != "" && skill != undefined) ? (value.skills === skill) : value.skills ) && 
-                                                 ( (locationn != "" && locationn != undefined) ? (value.location === locationn) : value.location) && 
-                                                 ( (experience != "" && experience != undefined) ? (value.experience === experience) : value.experience) ))
-    console.log(userSearch)
-    let n=userSearch.length
-    for(let i =0; i <n ; i++){
-        console.log(userSearch[i])
-    }
-});
+        userSearch.forEach(userSearch =>{
+            $('.display-job').append(`<div class="header">
+            <span class="title">${userSearch.title}</span>
+            <span class="skill">${userSearch.skills}</span>
+        <div class="company-name">${userSearch.companyname}</div>
+        <span class="experience">${userSearch.experience}</span>
+        <span class="location">${userSearch.location}</span>
+        </div>`)
+        })
+    });
+}
 

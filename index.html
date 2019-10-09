@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Carrers</title>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="jquery.js"> </script>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -20,26 +21,20 @@
         </div>
 
         <div class="search-area">
-            <div>
-                <div class="search-skill"> <input  class="size" id="skills" type="text" placeholder="skills" value=""></div>
-                <div class="search-location"><input class="size" id="location" type="text" placeholder="Location" value=""></div>
-                <div class="search-experience"> <input  class="size" id="experience" type="text" placeholder="experience" value=""></div>
-            </div>
-            <div>
-                <div class="search-button"><input class="size" type="button" value="search"></div>
-            </div>
+            <span class="search"> <input  class="size" id="skills" type="text" placeholder="Skills, Experience, Location " value=""></span>
+            <span class="search-button"><input class="size-button" type="button" value="search"></span>
         </div>
 
         <div class="display-job">
-            <div class="title">Title</div>
-            <div class="skill">Skill</div>
-            <div class="company-name">Company name</div>
-            <div class="experience">Experience</div>
-            <div class="location">Location</div>
+            <div class="header">
+                <span class="title"></span>
+                <span class="skill"></span>
+                <div class="company-name"></div>
+                <span class="experience"></span>
+                <span class="location"></span>
+            </div>
         </div>
-
-    </div>s
-    
+    </div>
 </body>
 <script src="script.js"></script>
 </html>

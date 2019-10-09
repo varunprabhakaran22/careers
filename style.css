@@ -2,6 +2,7 @@
     --primary-color:#000000;
     --secondary-color:#ffffff;
     --font-size:32px;
+    --font-size-secondary:20px;
 }
 
 .container{
@@ -38,21 +39,59 @@ a{
 }
 
 .search-area{
-    display: flex;
-    justify-content: space-between;
+    /* display: flex;
+    justify-content: space-between; */
     max-width: 1080px;
     margin: auto;
 }
 
-.search-skill, .search-location, .search-experience, .search-button{
-    display: inline-block;    
-}
 
 .size {
     padding: 12px 20px;
-    margin: 0;
+    margin: 0 5% 10px 0;
+    width: 50%;
+    min-width: 280px;
 }
 
+.size-button{
+    padding: 12px 20px;
+    margin: 0;
+
+}
 .display-job{
-    
+    padding: 35px;
+    border:1px solid gray;
+    margin: 15px 0px 25px;
+    max-width: 640px;
+}
+ 
+.header{
+    /* display: flex; */
+    border-bottom: 2px solid black;
+    margin-bottom: 50px;
+    /* justify-content: space-between; */
+}
+
+.skill{
+    padding-right: 25px;
+    font-size: 18px;
+}
+.title{
+    font-size: var(--font-size-secondary);
+    padding-right: 50px;
+}
+
+.company-name{
+    font-size: 18px;
+    padding-top:15px;
+}
+
+.experience{
+    font-size: 16px;
+    line-height: 2.6;
+    padding-right:50px; 
+}
+
+.footer{
+    display: inline-block;
 }
