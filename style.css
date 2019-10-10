@@ -45,6 +45,11 @@ a{
     margin: auto;
 }
 
+.filter-area{
+    margin: 25px 50px;
+    display:none;
+
+}
 
 .size {
     padding: 12px 20px;
@@ -58,7 +63,9 @@ a{
     margin: 0;
 
 }
+
 .display-job{
+    display: none;
     padding: 35px;
     border:1px solid gray;
     margin: 15px 0px 25px;
