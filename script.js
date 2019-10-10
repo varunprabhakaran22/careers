@@ -14,6 +14,7 @@ function init(){
             type:'GET',
             success: function (data) {
                 jsonData=data
+                console.log(jsonData)
                 getUserInput()
             }
         });
@@ -64,14 +65,57 @@ function filterOption(){
     let filterLocations = new Array()
     // taking only the location values from data
     userSearch.forEach((value) => filterLocations.push(value.location));
+    console.log(filterLocations)
+
+    console.log("heyy")
+
+    let uniqueValues = new Set(filterLocations)
+    let uniq = [...uniqueValues]
+    console.log(uniq)
+
     // spiliting the string to array  
     let filterLocationsArray =new Array()
-    for(let i=0; i<filterLocations.length; i++){
-       filterLocationsArray.push( filterLocations[i].split(","))
+    for(let i=0; i<uniq.length; i++){
+       filterLocationsArray.push( uniq[i].split(","))
     }
-    
+     filterLocationsArray = filterLocationsArray.flat()
     console.log(filterLocationsArray)
-    console.log(...filterLocations.flat())
+
+    // x = [' aa ', ' bb '];
+    // x.map(s => s.trim());
+     
+    let x= filterLocationsArray.map(value => value.trim())
+
+    console.log(x)
+
+    // filterLocationsArray=filterLocationsArray.flat(Infinity)
+    // console.log(filterLocationsArray.flat())
+    // console.log(typeof(filterLocationsArray))
+
+    // spiliting the string to array  
+    // let filterLocationsArray =new Array()
+    // for(let i=0; i<filterLocations.length; i++){
+    //    filterLocationsArray.push( filterLocations[i].split(","))
+    // }
+    // console.log(" after using the split " + filterLocationsArray)
     
+    // console.log(filterLocationsArray)
+    // filterLocationsArray=(filterLocationsArray.flat(Infinity))
+    // console.log("After using flat " + filterLocationsArray)
+
+    // let uniqueValues= new Set(filterLocations)
+    // console.log("After using the set" + uniqueValues)
+
+    // let uniq= [...uniqueValues]
+
+    // console.log("hey "+ uniq + "\n")
+    // console.log(uniq.length)
+    // console.log(typeof(uniq))
+
+
+    // for(let i=0; i<filterLocations.length; i++){
     
+    //     console.log(filterLocationsArray[i].split(","))
+    // }
+    // console.log(typeof(filterLocationsArray))
 }
