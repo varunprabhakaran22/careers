@@ -63,31 +63,30 @@ function displayResult(){
 function filterOption(){
     $(" .filter-area").show();
     let filterLocations = new Array()
+
     // taking only the location values from data
     userSearch.forEach((value) => filterLocations.push(value.location));
-    console.log(filterLocations)
 
-    console.log("heyy")
-
+    //removing duplicate data
     let uniqueValues = new Set(filterLocations)
     let uniq = [...uniqueValues]
-    console.log(uniq)
-
+    
     // spiliting the string to array  
-    let filterLocationsArray =new Array()
+    let filterLocationsArray = new Array()
     for(let i=0; i<uniq.length; i++){
-       filterLocationsArray.push( uniq[i].split(","))
+       filterLocationsArray.push( uniq[i].split(",")) 
     }
+
+    //taking out the  inner array elements 
      filterLocationsArray = filterLocationsArray.flat()
     console.log(filterLocationsArray)
+
      //trimming the extra space
     filterLocationsArray= filterLocationsArray.map(value => value.trim())
 
-    console.log(filterLocationsArray)
-
+    //removing the duplicate data
     uniqueValues = new Set(filterLocationsArray)
     filterLocationsArray = [...uniqueValues]
-
     console.log(filterLocationsArray)
     
 
