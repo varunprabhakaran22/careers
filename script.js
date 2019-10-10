@@ -85,6 +85,12 @@ function filterOption(){
 
     console.log(filterLocationsArray)
 
+    uniqueValues = new Set(filterLocationsArray)
+    filterLocationsArray = [...uniqueValues]
+
+    console.log(filterLocationsArray)
+    
+
     // filterLocationsArray=filterLocationsArray.flat(Infinity)
     // console.log(filterLocationsArray.flat())
     // console.log(typeof(filterLocationsArray))
