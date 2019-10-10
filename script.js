@@ -80,13 +80,10 @@ function filterOption(){
     }
      filterLocationsArray = filterLocationsArray.flat()
     console.log(filterLocationsArray)
+     //trimming the extra space
+    filterLocationsArray= filterLocationsArray.map(value => value.trim())
 
-    // x = [' aa ', ' bb '];
-    // x.map(s => s.trim());
-     
-    let x= filterLocationsArray.map(value => value.trim())
-
-    console.log(x)
+    console.log(filterLocationsArray)
 
     // filterLocationsArray=filterLocationsArray.flat(Infinity)
     // console.log(filterLocationsArray.flat())
