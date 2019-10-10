@@ -46,10 +46,10 @@ function displayResult(){
         $(".display-job").show();
         userSearch.forEach(userSearch =>{
             $('.display-job').append(`<div class="header">
-            <span class="title">${userSearch.title}</span>
-            <span class="skill">${userSearch.skills}</span>
-        <div class="company-name">${userSearch.companyname}</div>
-        <span class="experience">${userSearch.experience}</span>
+            <span class="title"> Title: ${userSearch.title}</span>
+            <span class="skill"> Skills: ${userSearch.skills}</span>
+        <div class="company-name">Company :${userSearch.companyname}</div>
+        <span class="experience"> ${userSearch.experience}</span>
         <span class="location">${userSearch.location}</span>
         </div>`)
         })
@@ -62,33 +62,16 @@ function displayResult(){
 function filterOption(){
     $(" .filter-area").show();
     let filterLocations = new Array()
+    // taking only the location values from data
     userSearch.forEach((value) => filterLocations.push(value.location));
-    console.log(filterLocations);
+    // spiliting the string to array  
     let filterLocationsArray =new Array()
-
     for(let i=0; i<filterLocations.length; i++){
        filterLocationsArray.push( filterLocations[i].split(","))
     }
+    
     console.log(filterLocationsArray)
-
-
-
-
-
-    // filterLocations.forEach((value) => filterLocations.split(","));
-    // console.log(filterLocations);
-
-    // filterLocationsArray = filterLocations[0].split(",");
-
-    // for(var x=0; x < filterLocationsArray.length;x++){
-    //     console.log(filterLocationsArray[x]);
-    //    }
-
-
-
-
-
-    // console.log(typeof(filterLocations))
+    console.log(...filterLocations.flat())
     
     
 }
