@@ -102,3 +102,7 @@ a{
 .footer{
     display: inline-block;
 }
+
+.list{
+    text-decoration: none;
+}

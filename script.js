@@ -88,36 +88,14 @@ function filterOption(){
     uniqueValues = new Set(filterLocationsArray)
     filterLocationsArray = [...uniqueValues]
     console.log(filterLocationsArray)
+    console.log(filterLocationsArray.length)
     
-
-    // filterLocationsArray=filterLocationsArray.flat(Infinity)
-    // console.log(filterLocationsArray.flat())
-    // console.log(typeof(filterLocationsArray))
-
-    // spiliting the string to array  
-    // let filterLocationsArray =new Array()
-    // for(let i=0; i<filterLocations.length; i++){
-    //    filterLocationsArray.push( filterLocations[i].split(","))
-    // }
-    // console.log(" after using the split " + filterLocationsArray)
     
-    // console.log(filterLocationsArray)
-    // filterLocationsArray=(filterLocationsArray.flat(Infinity))
-    // console.log("After using flat " + filterLocationsArray)
+//     filterLocationsArray.forEach((value) => {
+//         $('.filter').append(`<div class="filter">
+//             <ul> <li class="list" > ${filterLocationsArray} </li> </ul>
+//         </div>`)
+//     })
+// }
 
-    // let uniqueValues= new Set(filterLocations)
-    // console.log("After using the set" + uniqueValues)
-
-    // let uniq= [...uniqueValues]
-
-    // console.log("hey "+ uniq + "\n")
-    // console.log(uniq.length)
-    // console.log(typeof(uniq))
-
-
-    // for(let i=0; i<filterLocations.length; i++){
-    
-    //     console.log(filterLocationsArray[i].split(","))
-    // }
-    // console.log(typeof(filterLocationsArray))
 }
