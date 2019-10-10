@@ -61,18 +61,34 @@ function displayResult(){
 
 function filterOption(){
     $(" .filter-area").show();
-    let filterLocation = new Array()
-    console.log(userSearch)
-    console.log(filterLocation)
+    let filterLocations = new Array()
+    userSearch.forEach((value) => filterLocations.push(value.location));
+    console.log(filterLocations);
+    let filterLocationsArray =new Array()
 
-    let n=userSearch.length
-    for(let i=0;i<n;i++)
-    {
-        let ffilterLocation=userSearch[i].location
-        filterLocation.push(ffilterLocation)
-        
+    for(let i=0; i<filterLocations.length; i++){
+       filterLocationsArray.push( filterLocations[i].split(","))
     }
-    console.log(filterLocation)
-    // filterLocation = userSearch.forEach((value) => value.location)
+    console.log(filterLocationsArray)
+
+
+
+
+
+    // filterLocations.forEach((value) => filterLocations.split(","));
+    // console.log(filterLocations);
+
+    // filterLocationsArray = filterLocations[0].split(",");
+
+    // for(var x=0; x < filterLocationsArray.length;x++){
+    //     console.log(filterLocationsArray[x]);
+    //    }
+
+
+
+
+
+    // console.log(typeof(filterLocations))
+    
     
 }
