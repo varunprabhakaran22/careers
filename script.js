@@ -62,39 +62,43 @@ function displayResult(){
 
 function filterOption(){
     $(" .filter-area").show();
-    let filterLocations = new Array()
-
-    // taking only the location values from data
-    userSearch.forEach((value) => filterLocations.push(value.location));
-
-    //removing duplicate data
-    let uniqueValues = new Set(filterLocations)
-    let uniq = [...uniqueValues]
+    document.getElementsByClassName("filter")[0].addEventListener("click",function(){
+        
+        let filterLocations = new Array()
     
-    // spiliting the string to array  
-    let filterLocationsArray = new Array()
-    for(let i=0; i<uniq.length; i++){
-       filterLocationsArray.push( uniq[i].split(",")) 
-    }
-
-    //taking out the  inner array elements 
-     filterLocationsArray = filterLocationsArray.flat()
-    console.log(filterLocationsArray)
-
-     //trimming the extra space
-    filterLocationsArray= filterLocationsArray.map(value => value.trim())
-
-    //removing the duplicate data
-    uniqueValues = new Set(filterLocationsArray)
-    filterLocationsArray = [...uniqueValues]
-    console.log(filterLocationsArray)
-    console.log(filterLocationsArray.length)
+        // taking only the location values from data
+        userSearch.forEach((value) => filterLocations.push(value.location));
     
-    for(let i=0; i<filterLocationsArray.length; i++){
-        $('.location').append(`
-                <ul> <li class="list" > ${filterLocationsArray[i]} </li> </ul>
-                            `)
-         }
+        //removing duplicate data
+        let uniqueValues = new Set(filterLocations)
+        let uniq = [...uniqueValues]
+        
+        // spiliting the string to array  
+        let filterLocationsArray = new Array()
+        for(let i=0; i<uniq.length; i++){
+           filterLocationsArray.push( uniq[i].split(",")) 
+        }
+    
+        //taking out the  inner array elements 
+         filterLocationsArray = filterLocationsArray.flat()
+        console.log(filterLocationsArray)
+    
+         //trimming the extra space
+        filterLocationsArray= filterLocationsArray.map(value => value.trim())
+    
+        //removing the duplicate data
+        uniqueValues = new Set(filterLocationsArray)
+        filterLocationsArray = [...uniqueValues]
+        console.log(filterLocationsArray)
+        console.log(filterLocationsArray.length)
+        
+        for(let i=0; i<filterLocationsArray.length; i++){
+            $('.filter-location').append(`
+                    <ul> <li class="list" > ${filterLocationsArray[i]} </li> </ul>
+            `)
+        }
+    })
+
     
     // filterLocationsArray.forEach((value) => {
     //     $('.filter').append(`<div class="filter">
