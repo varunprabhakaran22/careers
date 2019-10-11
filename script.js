@@ -95,11 +95,29 @@ function filterOption(){
         for(let i=0; i<filterLocationsArray.length; i++){
             $('.filter-location').append(`
                 <br>
-                <input  class="list" type="checkbox" name="area" id="area" value="0"> ${filterLocationsArray[i]} </input> 
+                <input  class="list" type="checkbox" name="area" id="area" value="${filterLocationsArray[i]}"> ${filterLocationsArray[i]} </input> 
                 <br>
             `)
         }
         
+            $(".apply").click(function() {
+                getValueUsingClass();
+            });
+            
+        
+        function getValueUsingClass(){
+            /* declare an checkbox array */
+            var chkArray = [];
+            
+            /* look for all checkboes that have a class 'chk' attached to it and check if it was checked */
+            $(".list:checked").each(function() {
+                chkArray.push($(this).val());
+            });
+
+            console.log(chkArray)
+      } 
+    })
+}    
 
     
     // filterLocationsArray.forEach((value) => {
@@ -107,5 +125,3 @@ function filterOption(){
     //         <ul> <li class="list" > ${value} </li> </ul>
     //     </div>`)
     // })
-
-}
