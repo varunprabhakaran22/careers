@@ -94,10 +94,12 @@ function filterOption(){
         
         for(let i=0; i<filterLocationsArray.length; i++){
             $('.filter-location').append(`
-                    <ul> <li class="list" > ${filterLocationsArray[i]} </li> </ul>
+                <br>
+                <input  class="list" type="checkbox" name="area" id="area" value="0"> ${filterLocationsArray[i]} </input> 
+                <br>
             `)
         }
-    })
+        
 
     
     // filterLocationsArray.forEach((value) => {

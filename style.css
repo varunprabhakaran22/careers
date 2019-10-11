@@ -111,3 +111,9 @@ a{
 .list{
     list-style-type: none;
 }
+
+.filter-location{
+    max-height: 25%;
+    /* overflow: hidden; */
+    overflow:scroll;
+}
