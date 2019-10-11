@@ -90,12 +90,16 @@ function filterOption(){
     console.log(filterLocationsArray)
     console.log(filterLocationsArray.length)
     
+    for(let i=0; i<filterLocationsArray.length; i++){
+        $('.location').append(`
+                <ul> <li class="list" > ${filterLocationsArray[i]} </li> </ul>
+                            `)
+         }
     
-//     filterLocationsArray.forEach((value) => {
-//         $('.filter').append(`<div class="filter">
-//             <ul> <li class="list" > ${filterLocationsArray} </li> </ul>
-//         </div>`)
-//     })
-// }
+    // filterLocationsArray.forEach((value) => {
+    //     $('.filter').append(`<div class="filter">
+    //         <ul> <li class="list" > ${value} </li> </ul>
+    //     </div>`)
+    // })
 
 }
