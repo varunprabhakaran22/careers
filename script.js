@@ -61,6 +61,8 @@ function displayResult(){
 
 
 function filterOption(){
+     /* declare an checkbox array */
+     var checkListArray = [];
     $(" .filter-area").show();
     document.getElementsByClassName("filter")[0].addEventListener("click",function(){
         
@@ -105,17 +107,16 @@ function filterOption(){
             });
             
         
-        function getValueUsingClass(){
-            /* declare an checkbox array */
-            var chkArray = [];
-            
+        function getValueUsingClass(){ 
             /* look for all checkboes that have a class 'chk' attached to it and check if it was checked */
             $(".list:checked").each(function() {
-                chkArray.push($(this).val());
+                checkListArray.push($(this).val());
             });
 
-            console.log(chkArray)
-      } 
+            console.log(checkListArray)
+            checkListArray = checkListArray.flat();
+            console.log(checkListArray)
+        } 
     })
 }    
 
