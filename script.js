@@ -120,8 +120,3 @@ function filterOption(){
 }    
 
     
-    // filterLocationsArray.forEach((value) => {
-    //     $('.filter').append(`<div class="filter">
-    //         <ul> <li class="list" > ${value} </li> </ul>
-    //     </div>`)
-    // })

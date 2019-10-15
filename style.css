@@ -104,6 +104,12 @@ a{
     padding-right:50px; 
 }
 
+.filter{
+    border: none;
+    background:none;
+    outline: none;
+}
+
 .footer{
     display: inline-block;
 }
